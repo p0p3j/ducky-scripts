@@ -49,7 +49,7 @@ git clone https://github.com/p0p3j/malduino-scripts.git
 
 
 ## License
-Distributed under The Unlicense. See `LICENSE.md` for more information.
+Distributed under The Unlicense. See `LICENSE` for more information.
 
 ## Contact
 <!-- p0p3j - [@twitter](https://twitter.com/) - piotr@ebarion.pl -->
