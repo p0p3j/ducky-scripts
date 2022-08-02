@@ -1,7 +1,7 @@
 <!-- WELCOME -->
 <br />
 <p align="center">
-
+  <img src="https://scatteredcode.net/wp-content/uploads/2019/12/ducky3.png" />
   <h3 align="center"Ducky Scripts</h3>
 
   <p align="center">
