@@ -5,7 +5,7 @@
   <h3 align="center"Ducky Scripts</h3>
 
   <p align="center">
-    My scripts for Bad-USB devices.
+    My Ducky Scripts for Bad-USB devices.
   </p>
 </p>
 
